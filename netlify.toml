@@ -1,0 +1,13 @@
+[build]
+  command = "next build"
+  publish = ".next"
+
+# Funciones propias (netlify/functions/*.mts) — la generación con IA es
+# una background function (config.background = true, hasta 15 min).
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[functions.environment]
+  # Las variables NEXT_PUBLIC_* / HF_TOKEN / GEMINI_API_KEY se definen
+  # con `netlify env:set` (no en committed files).

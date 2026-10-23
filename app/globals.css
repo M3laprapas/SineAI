@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #0b0d14;
+  --color-foreground: #e2e8f0;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(99, 102, 241, 0.16), transparent 60%),
+    radial-gradient(900px 500px at -10% 30%, rgba(34, 211, 238, 0.1), transparent 55%),
+    #0b0d14;
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Barra de reproducción de audio con estilo propio */
+audio {
+  filter: saturate(0.9);
+}
+audio::-webkit-media-controls-panel {
+  background-color: #131722;
+}
